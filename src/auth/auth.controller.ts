@@ -13,7 +13,7 @@ import { AuthService } from './auth.service';
 
     @Post()
     async create(@Res() res, @Body('session') loginData) {
-      const loginOp = this.authService.createSession(loginData);
+      const loginOp = await this.authService.validateUser(loginData.username, loginData.password);
       if (loginOp) {
         return res.status(HttpStatus.CREATED).json({
           message: 'session created',

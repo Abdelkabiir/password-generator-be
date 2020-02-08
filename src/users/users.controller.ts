@@ -11,6 +11,10 @@ import { UsersService } from './users.service';
 import { Users } from 'src/models/users';
 import { User } from 'src/models/user';
 
+/*
+* this controller will most liklely be ignored
+*/
+
 @Controller('users')
   export class UsersController {
     constructor(private readonly usersService: UsersService) {}

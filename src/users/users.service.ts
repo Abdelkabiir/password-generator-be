@@ -4,23 +4,30 @@ import { User } from 'src/models/user';
 
 @Injectable()
 export class UsersService {
-  private readonly users: Users = {
-    1: {
+  private readonly users: User[] = [
+    {
       id: 1,
       userName: 'Abdel',
+      password: '1234',
       dateOfBirth: new Date(),
     },
-    2: {
+    {
       id: 2,
       userName: 'Abdelkabir',
+      password: '5678',
       dateOfBirth: new Date(),
     },
-    3: {
+    {
       id: 3,
       userName: 'Abdelkabir Watil',
+      password: '9101',
       dateOfBirth: new Date(),
     },
-  };
+  ];
+
+  async findOne(username: string): Promise < User | undefined > {
+    return this.users.find(user => user.userName === username);
+  }
 
   findAll(): Users {
     return this.users;
