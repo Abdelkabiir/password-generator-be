@@ -82,8 +82,7 @@ export default class Utils {
 
         const length = options.length;
         if (length > 10000) {
-            alert('Password length too large');
-            return;
+            throw new Error('Password length too large');
         }
 
         for (let i = 0; length > i; i++) {
