@@ -3,7 +3,9 @@
 </p>
 
 ## Description
-This application is built using [nest](https://nestjs.com/). A progressive **Node.js** framework for building efficient and scalable server-side applications, heavily inspired by **Angular**.
+This application is built using :
+
+[nest](https://nestjs.com/). A progressive **Node.js** framework for building efficient and scalable server-side applications, heavily inspired by **Angular**.
 
 ## Installation
 ```bash
