@@ -1,11 +1,17 @@
-<p align="center">
-  This is the backend side for <a href="https://github.com/Abdelkabiir/password-generator-fe" target="blank">password generator application
-</p>
+# Password-generator-be (backend side)
+
+This project was generated using [nest](https://nestjs.com). A progressive **Node.js** framework for building efficient and scalable server-side applications, heavily inspired by **Angular**.
+
 
 ## Description
-This application is built using :
 
-[nest](https://nestjs.com/). A progressive **Node.js** framework for building efficient and scalable server-side applications, heavily inspired by **Angular**.
+This is the backend side for the password generator application.
+
+[forntend side](https://github.com/Abdelkabiir/password-generator-fe)
+
+
+[database connection helpers](https://github.com/Abdelkabiir/password-generator-db)
+
 
 ## Installation
 ```bash
