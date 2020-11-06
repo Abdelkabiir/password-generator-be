@@ -5,8 +5,8 @@ import { UsersService } from 'src/users/users.service';
 export class AuthService {
   constructor(private readonly usersService: UsersService) {}
 
-  createSession(logindata) {
-    return logindata;
+  createSession(loginData) {
+    return loginData;
   }
 
   async validateUser(username: string, pass: string): Promise<any> {
