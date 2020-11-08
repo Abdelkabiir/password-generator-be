@@ -1,31 +1,31 @@
-import { Injectable } from '@nestjs/common';
-import { Users } from 'src/models/users';
-import { User } from 'src/models/user';
+import { Injectable } from "@nestjs/common";
+import { Users } from "src/models/users";
+import { User } from "src/models/user";
 
 @Injectable()
 export class UsersService {
   private readonly users: User[] = [
     {
       id: 1,
-      userName: 'Abdel',
-      password: '1234',
-      dateOfBirth: new Date(),
+      userName: "Abdel",
+      password: "1234",
+      dateOfBirth: new Date()
     },
     {
       id: 2,
-      userName: 'Abdelkabir',
-      password: '5678',
-      dateOfBirth: new Date(),
+      userName: "Abdelkabir",
+      password: "5678",
+      dateOfBirth: new Date()
     },
     {
       id: 3,
-      userName: 'Abdelkabir Watil',
-      password: '9101',
-      dateOfBirth: new Date(),
-    },
+      userName: "Abdelkabir Watil",
+      password: "9101",
+      dateOfBirth: new Date()
+    }
   ];
 
-  async findOne(username: string): Promise < User | undefined > {
+  async findOne(username: string): Promise<User | undefined> {
     return this.users.find(user => user.userName === username);
   }
 
@@ -37,7 +37,7 @@ export class UsersService {
     const id = new Date().valueOf();
     this.users[id] = {
       ...newUser,
-      id,
+      id
     };
   }
 
@@ -48,7 +48,7 @@ export class UsersService {
       return user;
     }
 
-    throw new Error('No user found');
+    throw new Error("No user found");
   }
 
   update(updatedUser: User) {
@@ -57,7 +57,7 @@ export class UsersService {
       return;
     }
 
-    throw new Error('No user found to update');
+    throw new Error("No user found to update");
   }
 
   delete(id: number) {
@@ -68,6 +68,6 @@ export class UsersService {
       return;
     }
 
-    throw new Error('No user found to delete');
+    throw new Error("No user found to delete");
   }
 }

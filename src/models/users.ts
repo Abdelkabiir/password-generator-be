@@ -1,5 +1,5 @@
-import { User } from './user';
+import { User } from "./user";
 
 export class Users {
-    [key: number]: User;
+  [key: number]: User;
 }
